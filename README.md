@@ -9,7 +9,7 @@
 
 ## Features
 
-- **Multi-account Support:** Automate actions across multiple accounts. .
+- **Multi-account Support:** Automate actions across multiple accounts.
 - **Auto Complete Task** Automatically perform available quest
 - **Configurable Settings:** Control various aspects of the script via a `config.json` file.
 - **Using a proxy**
