@@ -66,7 +66,7 @@ copy(decodeURIComponent(sessionStorage['telegram-apps/launch-params']).split('tg
 query_id=AA....
 user=%7B%22id%....
 ```
-7. add it to `data.txt` file or create it if you dont have one
+7. add it to `query.txt` file or create it if you dont have one
 
 
 ## This bot helpfull?  Please support me by buying me a coffee: 
