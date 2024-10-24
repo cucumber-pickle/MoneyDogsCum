@@ -48,6 +48,25 @@ Create a config.json file in the root directory with the following structure:
 
 `cycle_delay`: Delay between different cycles of operations (in seconds) - the minimum and maximum values are taken randomly
 
+## About Proxy
+
+
+You can add your proxy list in `proxies.txt` and proxy format is like example below :
+
+Format :
+
+```
+http://host:port
+http://user:pass@host:port
+```
+
+Example :
+
+```
+http://127.0.0.1:6969
+http://user:pass@127.0.0.1:6969
+```
+
 ## How to get tgWebAppData (query_id / user_id)
 
 1. Login telegram via portable or web version
