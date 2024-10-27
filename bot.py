@@ -148,15 +148,10 @@ class MoneyDOGS:
         tokens[str(id)] = token
         open("tokens.json", "w").write(json.dumps(tokens, indent=4))
 
-    def process_query(self, query: str, id: str):
+    def process_query(self, query: str):
 
         #проверяем есть ли токен в токенс, если нет, то логинимся и сохряняем новый
-        token = self.get(id)
-        if token is None:
-            token = self.get_token(query)
-            if token is None:
-                return False
-            self.save(id, token)
+        token = self.get_token(query)
 
         if token:
             user_info = self.user_info(token)
@@ -299,14 +294,14 @@ class MoneyDOGS:
 
                         self.headers = get_headers(user_id)
 
-                        self.process_query(query, user_id)
+                        self.process_query(query)
 
                         self.log(
                             f"{Fore.CYAN + Style.BRIGHT}----------------------------------------------------------------------------{Style.RESET_ALL}")
 
                         account_delay = config['account_delay']
                         countdown_timer(random.randint(min(account_delay), max(account_delay)))
-
+                
                 cycle_delay = config['cycle_delay']
                 countdown_timer(random.randint(min(cycle_delay), max(cycle_delay)))
 
